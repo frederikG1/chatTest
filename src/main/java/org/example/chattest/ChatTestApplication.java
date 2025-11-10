@@ -7,4 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ChatTestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ChatTestApplication.class, args
+        SpringApplication.run(ChatTestApplication.class, args);
+    }
+
+}

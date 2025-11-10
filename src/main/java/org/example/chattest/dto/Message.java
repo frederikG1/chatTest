@@ -1,5 +1,5 @@
 
-package org.example.chattest.cresponse;
+package org.example.chattest.dto;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -32,6 +32,11 @@ public class Message {
     private List<Object> annotations;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
+
+    public Message(String system, String s) {
+        this.role = system;
+        this.content = s;
+    }
 
     @JsonProperty("role")
     public String getRole() {

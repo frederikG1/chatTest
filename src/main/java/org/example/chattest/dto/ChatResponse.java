@@ -1,5 +1,5 @@
 
-package org.example.chattest.cresponse;
+package org.example.chattest.dto;
 
 import java.util.LinkedHashMap;
 import java.util.List;
