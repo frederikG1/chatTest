@@ -33,12 +33,19 @@ public class chatGPTController {
         ChatRequest chatRequest = new ChatRequest();
         chatRequest.setModel("gpt-4o");
         List<Message> lstMessages = new ArrayList<>(); //en liste af messages med roller
-        lstMessages.add(new Message("system", "You are a helpful assistant."));
-        lstMessages.add(new Message("user", "Where is " + message));
+
+
+        lstMessages.add(new Message("system", "Du er en dansk hjælpende assistent der svarer kort og ligetil med svar som er sat op overskueligt og pænt."
+                + "Hvis du nærmer dig afslutning af tokens, skal du runde af for seneste sætning."));
+        //lstMessages.add(new Message("system", "You are a helpful assistant."));
+
+        lstMessages.add(new Message("user", message));
+        //lstMessages.add(new Message("user", "Where is " + message));
+
         chatRequest.setMessages(lstMessages);
-        chatRequest.setN(3); //n er antal svar fra chatgpt
+        chatRequest.setN(1); //n er antal svar fra chatgpt
         chatRequest.setTemperature(1); //jo højere jo mere fantasifuldt svar (se powerpoint)
-        chatRequest.setMaxTokens(50); //længde af svar
+        chatRequest.setMaxTokens(200); //længde af svar
         chatRequest.setStream(false); //stream = true, er for viderekomne, der kommer flere svar asynkront
         chatRequest.setPresencePenalty(1); //noget med ikke at gentage sig. se powerpoint
 
