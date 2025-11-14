@@ -35,8 +35,7 @@ public class chatGPTController {
         List<Message> lstMessages = new ArrayList<>(); //en liste af messages med roller
 
 
-        lstMessages.add(new Message("system", "Du er en dansk hjælpende assistent der svarer kort og ligetil med svar som er sat op overskueligt og pænt."
-                + "Hvis du nærmer dig afslutning af tokens, skal du runde af for seneste sætning."));
+        lstMessages.add(new Message("system", "Du er en dansk hjælpende assistent der svarer kort og ligetil med svar som er sat op overskueligt og pænt." + "Hvis du nærmer dig afslutning af tokens, skal du runde af for seneste sætning."));
         //lstMessages.add(new Message("system", "You are a helpful assistant."));
 
         lstMessages.add(new Message("user", message));
